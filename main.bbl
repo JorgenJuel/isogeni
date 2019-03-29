@@ -1,0 +1,305 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{algebra}{book}{}
+      \name{author}{3}{}{%
+        {{hash=8bb5a72e2178988bd5f3dbf48ee765a5}{%
+           family={Bhattacharya},
+           familyi={B\bibinitperiod},
+           given={P.\bibnamedelimi B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=9d4e5a94e1b3619332ee73e366316b8d}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={S.\bibnamedelimi K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=81c58dc4e70a648ab25a1b221d03bacf}{%
+           family={Nagpaul},
+           familyi={N\bibinitperiod},
+           given={S.\bibnamedelimi R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press, Cambridge}%
+      }
+      \strng{namehash}{237cf70cb76988e24c3354d043314622}
+      \strng{fullhash}{237cf70cb76988e24c3354d043314622}
+      \strng{authornamehash}{237cf70cb76988e24c3354d043314622}
+      \strng{authorfullhash}{237cf70cb76988e24c3354d043314622}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{isbn}{0-521-46081-6; 0-521-46629-6}
+      \field{title}{Basic abstract algebra}
+      \field{year}{1994}
+      \field{pages}{xx+487}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1017/CBO9781139174237
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1017/CBO9781139174237
+      \endverb
+    \endentry
+    \entry{cunstructing_supersingular_elliptic_curves}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4ea754f4de3d0dd87539e564ab0364cc}{%
+           family={Bröker},
+           familyi={B\bibinitperiod},
+           given={Reinier},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{4ea754f4de3d0dd87539e564ab0364cc}
+      \strng{fullhash}{4ea754f4de3d0dd87539e564ab0364cc}
+      \strng{authornamehash}{4ea754f4de3d0dd87539e564ab0364cc}
+      \strng{authorfullhash}{4ea754f4de3d0dd87539e564ab0364cc}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Comb. Number Theory}
+      \field{number}{3}
+      \field{title}{Constructing supersingular elliptic curves}
+      \field{volume}{1}
+      \field{year}{2009}
+      \field{pages}{269\bibrangedash 273}
+      \range{pages}{5}
+    \endentry
+    \entry{fulton}{book}{}
+      \name{author}{1}{}{%
+        {{hash=767aa5987bc9ca34674f72789ffddce3}{%
+           family={Fulton},
+           familyi={F\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Pub. Co., Advanced Book Program}%
+      }
+      \strng{namehash}{767aa5987bc9ca34674f72789ffddce3}
+      \strng{fullhash}{767aa5987bc9ca34674f72789ffddce3}
+      \strng{authornamehash}{767aa5987bc9ca34674f72789ffddce3}
+      \strng{authorfullhash}{767aa5987bc9ca34674f72789ffddce3}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780201510102}
+      \field{series}{Advanced book classics}
+      \field{title}{Algebraic curves: an introduction to algebraic geometry}
+      \field{year}{1989}
+      \verb{url}
+      \verb https://books.google.no/books?id=SEbvAAAAMAAJ
+      \endverb
+    \endentry
+    \entry{sidh}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=06ad878dfd043470d9603ec49bbb5aa5}{%
+           family={Jao},
+           familyi={J\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bdfabb09ec22b25193c87f2f6c280efc}{%
+           family={De\bibnamedelima Feo},
+           familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=933b52106a6745075f2fd273d943c021}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Bo-Yin},
+           giveni={B\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{4a3e5784c038a141b5f10c51ff8436de}
+      \strng{fullhash}{4a3e5784c038a141b5f10c51ff8436de}
+      \strng{authornamehash}{4a3e5784c038a141b5f10c51ff8436de}
+      \strng{authorfullhash}{4a3e5784c038a141b5f10c51ff8436de}
+      \strng{editornamehash}{933b52106a6745075f2fd273d943c021}
+      \strng{editorfullhash}{933b52106a6745075f2fd273d943c021}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present new candidates for quantum-resistant public-key cryptosystems based on the conjectured difficulty of finding isogenies between supersingular elliptic curves. The main technical idea in our scheme is that we transmit the images of torsion bases under the isogeny in order to allow the two parties to arrive at a common shared key despite the noncommutativity of the endomorphism ring. Our work is motivated by the recent development of a subexponential-time quantum algorithm for constructing isogenies between ordinary elliptic curves. In the supersingular case, by contrast, the fastest known quantum attack remains exponential, since the noncommutativity of the endomorphism ring means that the approach used in the ordinary case does not apply. We give a precise formulation of the necessary computational assumption along with a discussion of its validity. In addition, we present implementation results showing that our protocols are multiple orders of magnitude faster than previous isogeny-based cryptosystems over ordinary curves.}
+      \field{booktitle}{Post-Quantum Cryptography}
+      \field{isbn}{978-3-642-25405-5}
+      \field{title}{Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies}
+      \field{year}{2011}
+      \field{pages}{19\bibrangedash 34}
+      \range{pages}{16}
+    \endentry
+    \entry{elements_elliptic_curve}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5cd8e00710f43c41d8f7d6667efbc39f}{%
+           family={Rück},
+           familyi={R\bibinitperiod},
+           given={Hans-Georg},
+           giveni={H\bibinithyphendelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{5cd8e00710f43c41d8f7d6667efbc39f}
+      \strng{fullhash}{5cd8e00710f43c41d8f7d6667efbc39f}
+      \strng{authornamehash}{5cd8e00710f43c41d8f7d6667efbc39f}
+      \strng{authorfullhash}{5cd8e00710f43c41d8f7d6667efbc39f}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Math. Comp.}
+      \field{number}{179}
+      \field{title}{A Note on Elliptic Curves Over Finite Fields}
+      \field{volume}{49}
+      \field{year}{1989}
+      \field{pages}{301\bibrangedash 304}
+      \range{pages}{4}
+    \endentry
+    \entry{silverman}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3664152377f03b41cc73f9421d227145}{%
+           family={Silverman},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Dordrecht}%
+      }
+      \strng{namehash}{3664152377f03b41cc73f9421d227145}
+      \strng{fullhash}{3664152377f03b41cc73f9421d227145}
+      \strng{authornamehash}{3664152377f03b41cc73f9421d227145}
+      \strng{authorfullhash}{3664152377f03b41cc73f9421d227145}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{isbn}{978-0-387-09493-9}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{The arithmetic of elliptic curves}
+      \field{volume}{106}
+      \field{year}{2009}
+      \field{pages}{xx+513}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/978-0-387-09494-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-0-387-09494-6
+      \endverb
+    \endentry
+    \entry{sutherland-notes}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=39b64057826c6e70abf28e03e9b1fa8f}{%
+           family={Sutherland},
+           familyi={S\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{39b64057826c6e70abf28e03e9b1fa8f}
+      \strng{fullhash}{39b64057826c6e70abf28e03e9b1fa8f}
+      \strng{authornamehash}{39b64057826c6e70abf28e03e9b1fa8f}
+      \strng{authorfullhash}{39b64057826c6e70abf28e03e9b1fa8f}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{URL: \url{https://ocw.mit.edu/courses/mathematics/18-783-elliptic-curves-spring-2017/lecture-notes/}. Last visited on 2019/03/25}
+      \field{title}{{MIT Mathematics 18.783, Lecture Notes: Elliptic Curves}}
+      \field{year}{2017}
+    \endentry
+    \entry{velu}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1625798a10b29235bda6498de6309f09}{%
+           family={VELU},
+           familyi={V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{0}{%
+      }
+      \strng{namehash}{1625798a10b29235bda6498de6309f09}
+      \strng{fullhash}{1625798a10b29235bda6498de6309f09}
+      \strng{authornamehash}{1625798a10b29235bda6498de6309f09}
+      \strng{authorfullhash}{1625798a10b29235bda6498de6309f09}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{C. R. Acad. Sci. Paris, Series A}
+      \field{title}{Isogenies entre courbes elliptiques}
+      \field{volume}{273}
+      \field{year}{1971}
+      \field{pages}{305\bibrangedash 347}
+      \range{pages}{43}
+      \verb{url}
+      \verb https://ci.nii.ac.jp/naid/10029941471/en/
+      \endverb
+    \endentry
+    \entry{washington}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=acb74b5bc509c76e008926f87042328e}{%
+           family={Washington},
+           familyi={W\bibinitperiod},
+           given={Lawrence\bibnamedelima C},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Boca Raton, Fla}%
+      }
+      \list{publisher}{1}{%
+        {Chapman & Hall/CRC}%
+      }
+      \strng{namehash}{acb74b5bc509c76e008926f87042328e}
+      \strng{fullhash}{acb74b5bc509c76e008926f87042328e}
+      \strng{authornamehash}{acb74b5bc509c76e008926f87042328e}
+      \strng{authorfullhash}{acb74b5bc509c76e008926f87042328e}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1584883650}
+      \field{series}{Discrete mathematics and its applications}
+      \field{title}{Elliptic curves : number theory and cryptography}
+      \field{year}{2003}
+      \keyw{Koding; Kryptografi; Tallteori; Elliptiske kurver; Elliptiske kurver; Tallteori; Kryptografi -- Matematikk; tallteori; kryptografi; koding}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

@@ -1,0 +1,101 @@
+Vi skal nå begynne å se på avbildinger mellom varieteter og etter hvert elliptiske kurver. 
+
+
+\begin{definisjon}
+La $V/K$ være en varietet. Da er \textbf{koordinatringen} til $V$, $$K[V] = K[X_0, \ldots, X_n] / I(V)$$ altså restklassen av polynomer med $n$ variable modulo $I(V)$. 
+\end{definisjon}
+
+\begin{eksempel}
+La $V/\FF_p$ være varieteten definert fra vår elliptiske kurvelikning $f(x,y)$. Da er koordinatringen på formen $\FF_p[x,y]/\langle y^2 - x^3 - ax - b \rangle$. Altså er f.eks $y^2$ det samme som $x^3 + ax + b$ i koordinatringen.
+\end{eksempel} 
+
+\begin{definisjon}
+La $V/K$ være en affine varieteten definert av idealet $f(x,y)$. Da er \textbf{funksjonskroppen}, $K(V)$, kvotientkroppen til den tilhørende koordinatringen $K[V]$.
+\end{definisjon}
+
+\begin{definisjon}
+La $V$ være en projektiv varietet definert av idealet $I = \langle f(X) \rangle$. Da er \textbf{funksjonskroppen}, $K(V)$, alle rasjonale funksjoner $g/h$ ($h \neq 0$) med følgende restriksjoner:
+\begin{enumerate}[noitemsep]
+    \item $g,h$ homogene polynomer i $K[x,y,z]$ av samme grad.
+    \item $h$ er ikke i idealet $I(V)$
+    \item $f_1/g_1$ og $f_2/g_2$ er ekvivalente dersom $f_1g_2 - f_2g_1 \in I(V)$
+\end{enumerate}
+\end{definisjon}
+\textbf{TODO: vis at definisjonene er tilsvarende, og forklar hvorfor begge er med}
+
+
+Vi er kun interessert i avbildinger mellom elliptiske kurver, vi kan derfor endre litt på måten vi skriver elementer i funksjonskroppen. Hver funksjon, $\phi$, er på formen $f(x,y)/g(x,y)$ for $f, g \in \overline{K}(E)$, altså i restklassen modulo idealet til et polynom på formen $y^2 - x^3 - Ax - B$. Dermed kan vi alltid erstatte $y^2$ med $x^3-Ax-B$, så vi får at leddet med $y$ maksimalt kan ha grad $1$. Dermed kan vi dele ut $y$, og vi får $f(x,y) = f_1(x) + f_2(x)y$ og $g(x,y) = g_1(x) + g_2(x)y$.  $$\phi = \frac{f_1(x) + f_2(x)y}{g_1(x) + g_2(x)y}$$ 
+Men dette kan vi forkorte mer, vi kan multiplisere nevner og teller med $g_1(x) - g_2(x)y$ og så erstatte $y^2$ igjen, så vi sitter igjen med \begin{equation}
+\label{forkortet funksjon}
+phi = \frac{h_1(x) + h_2(x)y}{h_3(x)}
+\end{equation}
+Altså kan vi alltid skrive et element i funksjonskroppen til en elliptisk kurve på denne måten.
+
+\begin{definisjon}
+La $V_1$ og $V_2$ være varieteter i det projektive planet, og $f_0, f_1, f_2 \in \overline{K}(V_1)$.  Da er en \textbf{rasjonal avbilding} fra $V_1$ til $V_2$ en avbilding på formen $$ \phi: V_1 \rightarrow V_2 \text{, } \phi = [f_0, f_1, f_2] $$ 
+Der man evaluerer $\phi$ komponentvis, altså $\phi(P) = [f_0(P), f_1(P), f_2(P)]$ for alle $P \in V_1$ der $f_0, f_1 og f_2$ er definert og $P \neq 0$.
+\end{definisjon}
+
+På samme måte som i seksjon 2 kan vi tenke på dette som affine varieteter mens vi i realiteten bruker projektive varieteter. Altså blir en rasjonal avbilding på formen $\phi: V_1 \rightarrow V_2, (x,y) \mapsto (f(x,y), g(x,y))$ i stedet for slik den er definert over.
+
+
+\begin{definisjon}
+La $\phi$ være en rasjonal avbilding. Vi sier at $\phi$ er \textbf{definert} i et punkt $P \in V_1$ dersom det finnes et funksjon $g \in \overline{K}(V_1)$ slik at
+\begin{enumerate}[noitemsep]
+    \item $g f_i$ er definert i punktet $P$
+    \item $(gf_i)(P) \neq 0$ for minst én $i$
+\end{enumerate}
+Vi skriver så $$ \phi(P) = [(gf_0)(P), \ldots, (gf_n)(P)] $$
+\end{definisjon}
+
+\begin{definisjon}
+La $\phi: V_1 \rightarrow V_2$ være en rasjonal avbilding. Vi sier at $\phi$ er en \textbf{morfisme} hvis den er definert i alle punkt $P \in V_1$.
+\end{definisjon}
+
+Vi kommer ikke til å være opptatt av å skille morfier fra rasjonale avbildinger da vi automatisk får slike morfier når vi ser på avbildinger fra en glatt projektiv kurve til en varietet, men vi må kjenne til begrepet for å vise at dette stemmer.
+
+\begin{teorem}
+Dersom $C/K$ er en glatt projektiv kurve vil alle rasjonelle avbildinger fra $C/K$ til en projektiv varietet $V/K$ være morfier.
+
+\begin{proof}
+For å bevise dette må vi introdusere mange ting... \textbf{TODO: Prøv å fjerne ting som ikke er viktig}
+
+La først $M_P = \{f \in \overline{K}(C) \mid f(P) = 0\}$
+
+Så definerer vi ordenen til $f \in \overline{K}[C]$, $ord_P(f) = sup\{d \in \ZZ \mid f \in M_P^d\}$, det er lett å sjekke at $ord_P(f/g) = ord_P(f) - ord_P(g)$
+
+La nå $t \in \overline{K}[C]$ være slik at $ord_P(t) = 1$ (dette kalles "Uniformizer")
+
+La $\phi = [\phi_0, \ldots, \phi_n]$ være en vilkårlig rasjonal avbilding fra $C/K$ til $V/K$. $\phi$ er da definert i punktet $P$ hvis og bare hvis $ord_P(\phi_i) \geq 0$ for minst én $i$. \textbf{TODO: Bevis for dette - definisjon kan da ikke være nok}.
+
+La oss nå se på alle ordenene til $\phi_i$, merk at hver funksjon er på formen $f_i/g_i \in \overline{K}(V)$, da er $ord_P(\phi_i) = ord_P(f_i) - ord_P(g_i)$, så denne kan potensielt være negativt og dermed udefinert i punktet $P$. Heldigvis kan vi multiplisere med en funksjon fra $\overline{K}(V)$, så la $n = min\{ord_P(\phi_i)\}$ da vil $ord_P(t^{-n}) = -n$ (Dette følger fra teoeremet innenfor diskre valueringsring). Hvis vi nå ser på $[t^{-n}\phi_0, \ldots, t^{-n}\phi_n]$ har vi at $ord_P(t^{-n}\phi_i) \geq 0$ for alle $i$, og $ord_p(t^{-n}\phi_j) = 0$ for minst én $j$. Altså er $\phi$ definert i punktet $P$, og tilsvarende kan gjøres for alle $P$ i $C/K$, så $\phi$ er en morfi.
+
+
+\textbf{TODO: Dersom dette skal vises ordentlig må jeg gå om "Diskre valueringsring - "discrete valuation ring" og finne en bedre forklaring}
+\end{proof}
+\end{teorem}
+
+\begin{teorem}
+\label{morfi konstant eller surjektiv}
+La $\phi: E_1 \rightarrow E_2$ være en morfi mellom to elliptisk kurver. Da er enten $\phi$ konstant eller surjektiv. \textbf{MERKNAD: Vanligvis fra morfi mellom to "kurver" - ikke nødvendigvis elliptiske kurver}
+\textbf{TODO: Finn ut, og bevis dette}
+Bevis:
+Se [243, I \$5, theorem 4]
+\begin{proof}
+Først annta $E_1$ defineres av $y^2 - x^3 - Ax - B$, og $E_2$ defineres av $y^2 - x^3 - A'x - B'$ for $A, B, A', B' \in K$.
+Vi vet fra \ref{forkortet funksjon} at $\phi = (\frac{h_1(x) + h_2(x)y}{h_3(x)}, \frac{g_1(x) + g_2(x)y}{g_3(x)}$. La så $P = (a,b) \in E_2$. 
+
+Se på funksjonen $f(x) = h_1(x) + h_2(x)y - a h_3(x)$. $f$ kan da være konstant eller ikke.
+Annta $f$ er ikke-konstant. Da vil $f$ ha en rot, $x_0$ i $\overline{K}$, altså er $f(x_0) = 0$, og vi får $\frac{h_1(x_0) + h_2(x_0)y}{h_3(x_0)} = a$. Bruk så denne roten, $x_0$, og sett $y_0 = \sqrt{x_0^3 + Ax_0 + B}$. Da vet vi at $\phi$ er definert for $(x_0, y_0) \in E_1$, og  $\phi(x_0, y_0) = (a, b')$ der $b = a^3 + A'a+B = b'$. Siden både $(a, b)$ og $(a,-b) = (a, b')$ er punkter i $E_2$ må vi vite at de begge har et prebilde. Dersom $b' = -b$ har vi også at $(x_0, -y_0) \in E_1$ og $\phi(x_o, -y_0) = (a, -b') = (a,b)$. Altså vil alle punkter i $E_2$ ha et prebilde i $E_1$.
+
+Annta så at $f$ er konstant. \textbf{Her stemmer det ikke helt}
+
+\cite[II 2.1]{silverman}
+\end{proof}
+\end{teorem}
+
+\begin{definisjon}
+Vi sier at to varieteter er isomorfe dersom det finnes en mrfi $\phi: V_1 \rightarrow V_2$ og en morfi $\psi: V_2 \rightarrow V_1$ slik at $\phi \circ \psi$ og $\psi \circ \phi$ er identitetsavbildinger på $V_2$ og $V_1$. 
+\end{definisjon}
+
+\textbf{TODO: Ikke-trivielt eksempel to isomorfe elliptiske kurver}

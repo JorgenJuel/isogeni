@@ -1,0 +1,90 @@
+\documentclass[norsk]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{babel}[norsk]
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{biblatex}[backend=biber]
+\usepackage{graphicx}
+\usepackage[keys, sets, operators, primitives]{cryptocode}
+
+\usepackage{glossaries}
+
+\usepackage{pgfplots}
+
+\newtheorem{teorem}{Teorem}[section]
+\newtheorem{proposisjon}[teorem]{Proposisjon}
+\newtheorem{lemma}[teorem]{Lemma}
+\newtheorem{korollar}[teorem]{Korollar}
+
+\theoremstyle{definition}
+\newtheorem{eksempel}[teorem]{Eksempel}
+\newtheorem{definisjon}[teorem]{Definisjon}
+
+\title{Bacheloroppgave}
+\author{Jørgen}
+\date{\today}
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Affine}{\mathbb{A}}
+\newcommand{\Projective}{\mathbb{P}}
+\newcommand{\OO}{\mathcal{O}}
+
+\makeglossaries
+\input{glossaries.tex}
+
+\bibliography{references}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+
+\section{Algebra}
+\input{algebra.tex}
+
+\section{Elliptiske kurver}
+\subsection{Algebraisk geometri}
+\input{algebraisk_geometri.tex}
+\input{elliptiske_kurver.tex}
+%\subsection{genus}
+%\input{genus.tex}
+
+\section{Avbildinger}
+\subsection{Rasjonale avbildinger}
+\input{rasjonelle_avbildinger.tex}
+\input{isogenier.tex}
+
+\section{Struktur}
+\input{struktur.tex}
+
+\section{SIDH/CSIDH}
+\input{sidh.tex}
+
+\section{Sikkerhet}
+Hvorfor er dette sikkert/vanskelig å knekke.
+\input{sikkerhet.tex}
+\section{Implementering og ytelse}
+ 
+ 
+ %\section{Mer å skrive om}
+% \input{mer.tex}
+
+\clearpage
+ 
+\printglossary
+
+\printbibliography
+
+\end{document}
+

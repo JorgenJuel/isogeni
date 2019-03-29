@@ -1,0 +1,54 @@
+Supersingular Isogeny-based Diffie Hellman (eller bare SIDH) er et kroptosystem som inkluderer zero-knowledge, nøkkelutveksling og offentlig-nøkkel kryptering. 
+
+\subsection{Nøkkelutveksling}
+
+\begin{figure}[h!]
+    \centering
+      \begin{tikzcd}
+        E_0 \arrow{r}{\phi_A} \arrow[swap]{d}{\phi_B} & E_A \arrow{d}{\phi_{AB}} \\
+         E_B \arrow{r}{\phi_{BA}}& E_{AB} \cong E_{BA}
+      \end{tikzcd}
+    \caption{Isogenidiagram}
+    \label{fig:my_label}
+\end{figure}
+\textbf{Oppsett}: Velg en en supersingulær elliptisk kurve $E_0$ definert over $\FF_p^2$, der $p = l_A^{e_A}l_B^{e_B}f \pm 1 $. Finn så basiser $\{P_A, Q_A\}$ og $\{P_B, Q_B\}$ for $E_0[l_A^{e_A}]$ og $E_0[l_B^{e_B}]$.
+\\
+
+\procedure{Nøkkelutveksling SIDH}{ %
+	\textbf{Alice} \> \> \textbf{Bob} \\%\pclb
+	%\pcintertext[dotted]{Nøkkelutveksling} \\
+	m_A,n_A \sample \ZZ / l_A^{e_A}\ZZ  \> \> m_B,n_B \sample \ZZ / l_B^{e_B}\ZZ \\
+	r_A \gets m_AP_A + n_AQ_A \> \> r_A \gets m_BP_B + n_BQ_B \\
+	\text{Lag: } \phi _A: E_0 \rightarrow E_0/\langle r_A \rangle \> \> \text{Lag: } \phi _B: E_0 \rightarrow E_0/\langle r_B \rangle \\
+	E_A \gets \phi_A(E_0) \> \> E_B \gets \phi _B(E_0) \\ 
+	 \> \sendmessageright{top=\text{$\phi _A(P_B)$, $\phi _A(Q_B), E_A$}} \pclb
+	\>  \> \sendmessageleft{top=\text{$\phi _B(P_A)$, $\phi _B(Q_A), E_B$}} \\%\pclb 
+	%\pcintertext[dotted]{Enighet} \\
+	r_{AB} \gets m_A \phi_B(P_A) + n_A \phi_B(Q_A) \> \> r_{BA} \gets m \phi_A(P_B) + n \phi_A(Q_B) \\
+	\text{Lag: } \phi _{AB}: E_B \rightarrow E_B/\langle r_{AB} \rangle \> \> \text{Lag: } \phi _{BA}: E_A \rightarrow E_A/\langle r_{BA} \rangle \\
+	Z \gets j(E_{AB}) \> \> Z \gets j(E_{BA}) }
+\\
+
+Legg merke til at $E_{AB}$ og $E_{BA}$ er isomorfe, så j-invarianten er den samme.
+
+
+
+\subsection{Komponenter}
+\subsubsection{Finne primtallet P}
+Protokollen tar utgangspunkt i at det finnes et primtall, $P$, som er på formen $l_A^{e_A}l_B^{e_B}f + 1$. På grunn av primtallsteoremet vet vi at det finnes "XX" slike av størrelsesorden "XXX"bits, altså er det overkommelig å finne et primtall. Når vi går fram for å finne et primtall bestemmer vi oss for små primtall $l_A$ og $l_B$, disse kan være så små som $2$ og $3$. Deretter bestemmer vi eksponentene $e_A$ og $e_B$ slik at både $l_A^{e_A}$ og $l_B^{e_B}$ er store - det er tross alt der sikkerheten til protokollen ligger. Så velger vi oss tilfeldige partall, $f$, og sjekker om $P = l_A^{e_A}l_B^{e_B}f + 1$ eller $P = l_A^{e_A}l_B^{e_B}f - 1$ er et primtall. Hvis ikke velger vi kun en ny $f$.
+\subsubsection{Finne den elliptiske kurven}
+Når vi har $P$ velger vi oss en supersingulær elliptisk kurve $E$ definert over $\FF_q = \FF_p^2$ (Vi skriver $q$ for å forenkle notasjonen). Eneste kravet vi setter til kurven er at den skal være supersingulær og ha kardinalitet $(l_A^{e_A}l_B^{e_B}f)^2$. Av brökers algoritme har vi at dette kan konstrueres i $O(log(q)^3)$ tid \cite{cunstructing_supersingular_elliptic_curves}.
+
+Når det er sagt er det ikke sikkert vi ønsker å bruke denne "faste" kurven som vår elliptiske kurve. Bakgrunnen for dette er at det ikke er sikkert at løsningen for isogeni-sti-problemet til en elliptisk kurve lar seg redusere til løsningen for en "spessiell" elliptisk kurve. Heldigvis er det flere kurver å velge mellom, og det koster lite å finne en isomorf kurve (hvor vanskelig?)
+
+\subsubsection{Finne basiser for torsongruppene}
+Vi vet at $E/\FF_q$ har $\#E(\FF_q) = n = (l_A^{e_A}l_B^{e_B}f)^2$, altså kan vi lett finne elementer i $E[l_A^{e_A}]$ på samme måte som eksempel \ref{torson_automorfi}. Men vi ønsker basiser, så vi må finne punkter av orden $l_A^{e_A}$. Av proposisjon \ref{torson_generatorer} har vi at det finnes $(l_A^{e_A} - l_A^{e_A - 1})^2$ slike. \textbf{TODO: Sannsynligheten for å finne ett slikt element}
+For å sjekke at et element har riktig orden sjekker man ganske enkelt bare $[l_A]P$, $[l_A^2]P$, $\ldots$, $[l_A^{e_A-1}]P$ og ser om de er $\OO$. Hvis ikke har funnet et basiselement.
+
+Når vi har funnet ett punkt, gjentar vi prosessen over til vi finner et annet punkt, $Q$. Deretter sjekker vi om de er lineært uavhengige. Siden både $Q$ og $P$ har orden $l_A^{e_A}$ vil de generere hver sin undergruppe, \textbf{TODO: Hva er sannsynligheten for at de genererer samme gruppe}.  
+
+For å sjekke om de er lineart uavhengige ser vi på $[l_A^{e_A - 1}]PA + [n l_A^{e_A - 1}]Q_A = 0$, om du kan finne en slik $n \in \ZZ/(e_A \ZZ)$ er punktene lineært avhengige og du må finne en ny $Q$, ellers har du funnet to lineart uavhengige punkter. \textbf{Må vise at dette er en "god" test for lineart avhengighet}
+\subsubsection{Beregne isogenien og kjernen}
+Kjernen $\langle R \rangle$ beregnes ved å først lage generatoren, $R = mP + nQ$, men siden dette genererer en undergruppe av torsongruppa spiller det ingen rolle hvilket element fra gruppa vi bruker. Siden vi også vet at $m$ ikke deler $l_A$ kan vi finne inversen $m^{-1} \mod{l_A^{e_A}}$. Samtidig vet vi at $mP + nQ$ er generator for samme gruppe som $m^{-1}(mP + nQ)$, altså har vi $P + m^{-1}nQ$ som generator. Denner forenklingen gjør det lettere å beregne generatoren da invertering og multiplikasjon modulo $l_A^{e_A}$ er raskere enn å gange og opphøye punktet $P$. 
+
+Vi ønsker å beregne en isogeni av grad $l_A^{e_A}$. Fra korollar \ref{isogeni_dekomponering} har vi at denne kan dekomponeres til $e_A$ isogenier av grad $l_A$. Eksempel \ref{eksempel_dekomponere_isogeni} gir  oss en god metode for å beregne isogenier.

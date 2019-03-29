@@ -1,0 +1,63 @@
+
+Torsiongrupper er en viktig del av protokollen vi senere skal se på. Vi kommer til å bruke de til å lage kjerner av riktig størrelse og må vite litt om hvordan de ser ut.
+
+\begin{definisjon}
+La $E$ være en elliptisk kurve, og $m$ et heltall. Vi sier at multiplikasjon av $m$-avbildingen, $[m]: E \rightarrow E$ er definert som $[m]: P \mapsto \underbrace{P + \ldots, + P}_{m \text{ ganger}}$
+\end{definisjon}
+
+\begin{definisjon}
+La $E$ være en elliptisk kurve, og $m$ være et heltall. Vi sier at $m$-torsiongruppa, $E[m]$ er alle punktene som multiplisert med $m$ blir $\OO$: $$E[m] = \{P \in E \mid [m]P = \OO \} $$
+\end{definisjon}
+
+Merk, en torsongruppe inneholder ikke bare alle punktene av orden $m$. F.eks. vil $E[4]$ også inneholde punkter av orden 2 da $[4]P = [2][2]P = [2] \OO = \OO$.
+
+\begin{proposisjon}
+La $E$ være en elliptisk kurve, og $m$ et heltall. Da er $deg[m] = m^2$. 
+
+\begin{proof}
+\textbf{TODO: Bevis dette} 
+\end{proof}
+\end{proposisjon}
+
+\begin{korollar}
+\label{torsonstruktur}
+La $E$ være en elliptisk kurve, $m$ være et positivt heltall og $p = char(K)$. Da har vi følgende:
+\begin{enumerate}
+    \item Hvis $p = 0$ eller $p \nmid m$ da er $$ E[m] \cong \frac{\ZZ}{m\ZZ} \times \frac{\ZZ}{m\ZZ} $$
+    \item Ellers er en av følgende riktige \begin{enumerate}
+        \item $E[p^e] = \{O\}$ for alle $e = 1, 2, 3, \ldots$
+        \item $E[p^e] \cong \frac{\ZZ}{p^e\ZZ}$ for alle $e = 1, 2, 3, \ldots$
+    \end{enumerate}
+\end{enumerate}
+
+\begin{proof}
+\cite[III 6.4]{silverman}
+\end{proof}
+\end{korollar}
+
+\begin{eksempel}
+La $E/\FF_q$ være en elliptisk kurve med orden $( l_A^{e_A} l_B^{e_B}f) ^2$. der $l_A$, $l_B$, og $\sqrt(q)$ er (ulike) primtall. Siden $q \nmid l_A^{e_A}$ har vi at torsongruppa $$E[l_A^{e_A}] \cong \frac{\ZZ}{l_A^{e_A} \ZZ} \times \frac{\ZZ}{l_A^{e_A} \ZZ}$$. Altså vil to lineært uavhengige punkter $P, Q \in E$ generere hele torsongruppa. 
+\end{eksempel}
+
+
+\begin{proposisjon}
+\label{torson_generatorer}
+La $E/\FF_q$ være en elliptisk kurve og $E[p^e]$ være en torsongruppe der $p$ er et primtall og $char(\FF_q) \nmid p$. Da vil $E[p^e]$ ha $(p^e - p^{e-1})^2$ elementer av orden $p^e$. 
+
+\begin{proof}
+Siden $p$ er primtall vil $\ZZ / p^e\ZZ$ være en syklisk gruppe (av Gauss). Antall generatorer i denne gruppa vil være $\phi(p^e) = p^e - p^{e-1}$ (Eulers phi-funksjon). Siden $E[p^e] = \ZZ / p^e\ZZ \times \ZZ / p^e\ZZ$ finnes det $(p^e - p^{e-1})^2$ elementer av orden $p^e$
+\end{proof}
+\end{proposisjon}
+
+\begin{eksempel}
+\label{torson_automorfi}
+La $E/\FF_q$ være en elliptisk kurve der $\#E(\FF_q) = (l_A^{e_A})^2H$ der $l_A^{e_A} \nmid H$ 
+
+Siden vi vet at $E$ er en abelsk gruppe har vi at $E(\FF_q) \cong \frac{\ZZ}{l_A^{e_A} \ZZ}^2 \oplus C_H$, der $C_H$ er en syklisk gruppe av orden $H$. Vi kan nå se på avbildingen $[H]$. Denne fungerer som en automorfi på på $E[l_A^{e_A}]$ fordi $l_A \nmid H$. I tillegg vil det sende alle elementer i $C_H$ til $e$. Altså blir det en avbilding på formen $[H]: E \rightarrow  \frac{\ZZ}{l_A^{e_A} \ZZ} \times \frac{\ZZ}{l_A^{e_A} \ZZ}$. 
+
+Vi kan med andre ord bruke dette for å finne et element som ligger i torsongruppa $E[l_A^{e_A}]$.
+\end{eksempel}
+
+
+
+\textbf{TODO: Skriv om lineart uavhengige punkter som generer torsongruppa, tegn bilde (gitter-aktig)}

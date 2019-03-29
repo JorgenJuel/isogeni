@@ -1,0 +1,153 @@
+\textbf{TODO: Idealet er primisk, funksjonen som genererer idealet er irredusibelt}
+
+Overordnet ønsker vi å se nærmere på elliptiske kurver og spessielt avbildinger mellom disse. For å kunne bruke presis terminologi må vi gå via algebraisk geometri. Dette kapittelet kommer derfor først til å innføre noen grunnleggende begreper før vi ser nærmere på hva en elliptisk kurve er. Om du allerede har god kontroll på elliptiske kurver, og kan du fint hoppe over dette kapittelet.
+
+
+
+Vi starter med det aller enkleste. Dette er i praksis bare en formalisering av mengden av alle punkter over n dimensjoner.
+\begin{definisjon}
+Et \textbf{affint n-rom}, \gls{affin} er alle $n$-tupler over en kropp $$\Affine ^n = \Affine^n(\overline{K}) = \{P = (x_1, \ldots, x_n ) \in \overline{K}^n \}$$
+\end{definisjon}
+
+Problemet er bare at den ikke har nok elementer. Vi er ofte interessert i såkalte punkter i uendeligheten, og da må vi introdusere en ekstra variabel, samt sette noen begrensninger på elementene i rommet
+
+Et projektivt rom har en litt mer komplisert definisjon som baserer seg på ekvivalensklasser. Her sier vi at to (n+1)-tupler $(x_0, \ldots, x_n)$ og $(y_0, \ldots, y_n)$ er ekvivalente dersom det finnes et element $\lambda \in \overline{K}^*$ slik at $(\lambda x_0, \ldots, \lambda x_n) = (y_0, \ldots, y_n)$.
+
+Denne ekvivalensklassen skriver vi som $[x_0, \ldots, x_n]$
+\begin{definisjon}
+    Et \textbf{projektivt n-rom} $\Projective^n$ over $K$ består av ekvivalensklasser til $(n+1)$-tupler der minst én komponent er ikke-null $$\Projective^n = \Projective^n(\overline{K}) = \{[x_0, \ldots, x_n] | (x_0, \ldots, x_n) \in \Affine ^{n+1}(\overline{K}) \setminus \{(0, \ldots, 0)\} \}$$
+\end{definisjon}
+
+\begin{definisjon}
+La $\Projective^n(\overline{K})$ være et projektivt n-rom. Da er de \textbf{$K-$rasjonale punktene}, $\Projective^n(K)$, en delmengde av $\Projective^n(\overline{K})$ der restklassene defineres fra punkter med elementer i $K$. 
+
+$$\Projective^n(K) = \{[x_0, \ldots, x_n] \text{ $|$ } x_i \in K \} $$
+\end{definisjon}
+
+\begin{eksempel}
+$\Projective^2(\FF_p) = \{ [ \lambda x_0, \ldots, \lambda x_n] \text{ $|$ } x_i \in \FF_p, \lambda \in \overline{\FF_p} \}$, altså de $\FF_p$ rasjonelle punktene i $\Projective^2(\overline{\FF_p})$. Legg merke til at de individuelle punktene, $\lambda x_i$ ligger i $\overline{\FF_p}$, men siden alle har samme faktor fra $\overline{\FF_p}$ kan vi hente ut elementer i $\FF_p$ ved å dele to elementer på hverandre, $\frac{\lambda x_i}{\lambda x_j} = \frac{x_i}{x_j} \in \FF_p$
+\end{eksempel}
+
+%Siden vi her kun er opptatt av underrom av $\Projective^2$ trenger vi kun å tenke på punkter på formen $[x_0, x_2, x_3]$ og vi skriver det ofte som $[x, y, z]$ for å lettere skille mellom variablene.
+
+%Når vi snakker om punkter i det projektive rommet er det vanlig å skille mellom de tilhørende affine koordinatene som tilhører ekvivalensklassen $[x, y, 0]$ og punktene i uendeligheten som tilhører $[x, y, 1]$
+
+%Med andre ord finnes det en naturlig relasjon mellom projektive og affine rom. Når vi senere snakker om homogene polynomer lager vi oss dette ved å ganske enkelt introdusere en til variabel og multiplisere den inn slik at alle leddene har samme grad. På denne måten kan vi velge om vi vil snakke om projektive eller affine rom.
+
+Senere skal vi snakke om elliptiske kurver, og det er i praksis bare en delmengde av disse punktene/ekvivalensklassene, noe som er bakgrunnen for neste definisjon.
+
+\begin{definisjon}
+Le $I$ være et ideal i $\overline{K}[x_0, \ldots, x_n]$. Vi sier at en \textbf{projektiv algebraisk mengde} $V_I \subset \Projective^n$ er alle punktene som evalueres til null ved alle homogene polynomer i idealet $I$. $$V_I = \{P \in \Projective^n
+ \text{ $|$ } f(P) = 0 \text{ } \forall \text{ homogene } f \in I \} $$
+ \end{definisjon}
+Affine algebraiske mengder defineres på en tilsvarende måte, bare uten kravet om homogene polynomer.
+
+\begin{eksempel}
+Polynomet $f(X,Y,Z) = ZY^2 - X^3 - Z^2X \in \overline{\FF_p}[X,Y,Z]$ genererer idealet $I = \langle f \rangle \subset \overline{F_p}[X,Y,Z]$. Da blir den projektive algebraiske mengden $V_I$ ekvivalensklassene til nullpunktene til $f(X,Y,Z)$. Altså vil blant annet $[0,1,]$ være i $V_I$ siden $f(0,1,0) = 0$. 
+\end{eksempel}
+
+Legg merke til hvordan vi evaluerer polynomet $f$. Siden $f(x,y,z) = 0$ for en representant for ekvivalensklassen vet vi at den også er $0$ for alle andre representanter. $f(\lambda x, \lambda y, \lambda z) = \lambda^3 y^2z - \lambda^3 x^3 - \lambda^3 xz^2 = \lambda^3 ( y^2z - x^3 - xz^2)$ noe som er $0$ hvis og bare hvis $(y^2z - x^3 - xz^2)$ (så fremt karakteristikken ikke er 3).
+
+Tilsvarende kan vi definere idealet til en en algebraisk mengde basert på punktene den inneholder. 
+\begin{definisjon}
+    La $V$ være en algebraisk mengde. Da er \textbf{Idealet til $V$}, $I(V)$ idealet generert av alle polynomene som evalueres til $0$ i hele $V$ $$I(V) = \langle \{f \in \overline{K}[x_1, \ldots, x_n] | f(P) = 0, \forall P \in V \} \rangle$$
+\end{definisjon}
+\begin{proposisjon}
+Idealet er entydig bestemt av den algebraiske mengden.
+\begin{proof}
+La $I$ og $I'$ er to idealer til samme algebraiske mengde $V$. Annta at $I$ og $I'$ er ulike. Da har vi at det finnes et polynom $g \in I$ slik at $g(P) = 0$ for alle $P \in V$. Men da er også $g$ per definisjon i $I'$, altså har vi en motsigelse, og dermed vet vi at alle polynomer eksisterer i begge ideal.
+\end{proof}
+\end{proposisjon}
+
+\subsection{Planet}
+\begin{definisjon}
+Et \textbf{projektivt plan} er alle ikke-null tripler $[x, y, z]$ i det projektive 2-rommet $\Projective^2$
+\end{definisjon}
+
+\begin{definisjon}
+La $I$ være et ideal generert av et homogent polynom i $\overline{K}[x,y,z]$ med koefisienter i $K$. Da sier vi at den projektive algebraiske mengden $V_I$ er en \textbf{kurve} i det projektive planet, og vi skriver i stedet $C/K$ for å indikere at det er en kurve med koefisienter i $K$. 
+\end{definisjon}
+
+\begin{definisjon}
+La $C/K$ være en kurve. Da er de \textbf{$K'$-rasjonale punktene}, $C(K')$, alle punktene som kommer fra representanter i $K'$. 
+$$ C(K') = \{[x, y, z] \in C/K \text{ $|$ } (x,y,z) \in K'\}$$
+
+Merk at dette kun gjelder dersom $K'$ er en utvidelse av $K$.
+\end{definisjon}
+
+
+\begin{eksempel}
+\label{Elliptisk projektiv kurve}
+\begin{equation}
+    \label{Elliptisk kurve equation}
+    f(X,Y,Z) = Y^2Z - X^3 - aXZ^2 - bZ^3 \in \overline{\FF}_p \text{ med } p \geq 5
+\end{equation} 
+Der $a, b \in \FF_p$ er et slikt homogent polynom. Den algebraiske mengden $V_I$ der idealet $I$ er generert av $f(x,y,z)$ er derfor en projektiv kurve $C/\FF_p$.
+\end{eksempel}
+
+\begin{definisjon}
+La $V$ være en algebraisk mengde, og $I(V)$ være idealet til $V$. Da er $V$ en \textbf{algebraisk varietet} (enten projektiv eller affin) hvis $I(V)$ er irredusibelt i $\overline{K}[x_0, \ldots, x_n]$
+\end{definisjon}
+
+En interessant egenskap ved varieteter er at det finnes en naturlig måte å gå mellom projektive og affine varieteter. La oss se på to avbildnger. Først definer inklusjonsavbildingen $\phi: \Affine^n \rightarrow \Projective^n$, $(x_1, \ldots, x_n) \mapsto [x_1, \ldots, x_{i-1}, 1, x_i, \ldots, x_n]$ 
+Tilsvarende kan vi lage oss projeksjonsavbildingen: $\phi_i^{-1} : \Projective ^n \rightarrow \Affine^n$, $ [x_0, \ldots, x_n] \mapsto (\frac{x_0}{x_i}, \ldots, \frac{x_{i-1}}{x_i}, \frac{x_{i+1}}{x_i}, \ldots, \frac{x_n}{x_i})$, legg merke til hvordan denne er veldefinert ved at alle representanter for en ekvivalensklasse reduseres til samme representant.
+
+\begin{definisjon}
+La $V_I$ være an affin varietet. Vi sier at den \textbf{projektive lukkingen} av $V_I$, $\overline{V_I},$ er den projektive varieteten vi får fra inkludsjonsavbildingen, $\phi_i$ (for én $i$), Der idealet blir den homogeniserte versjonen av $I$, altså $\overline{I} = \{f^* \mid f \in I \}$
+\end{definisjon}
+
+\begin{proposisjon}
+La $I$ være et primisk ideal i $K[x,y]$ da vil $\overline{I}$ være et primisk ideal i $k[x,y,z]$. 
+\begin{proof}
+Fulton 4.4 Projective and affine varieties
+\end{proof}
+\end{proposisjon}
+
+Konsekvensen av proposisjonen over er at dersom vi har en varietet i det affine rommet, så vil den projektive lukkingen også være en varietet. Altså er definisjonen berettiget.
+
+\begin{proposisjon}
+La $V$ være en affin varietet og $\overline{V}$ være en projektiv varietet slik at $V = \overline{V}  \cap \Affine^n$ (Med $\overline{V}  \cap \Affine^n$ mener vi projeksjonsavbildingen, $\pi_i$ for en fiksert $i$ fra $\overline{V}$ foruten de ekvivalensklassene som har $x_i = 0$).
+Da vil alle affine varieteter identifiseres med en unik projektiv varietet.
+\textbf{Finn et bedre bevis for dette [111] I2.3 sier ikke dette}
+\end{proposisjon}
+
+\begin{eksempel}
+La $f(x,y)$ være kurven definert i eksempel \ref{Elliptisk Kurve polynom}. Siden dette danner en affin varietet vil den også danne en projektiv varietet dersom vi homogeniserer polynomet til en av samme type som eksempel \ref{Elliptisk projektiv kurve}. Altså har vi at kurven definert i eksempel \ref{Elliptisk projektiv kurve} er en projektiv varietet.
+\end{eksempel}
+
+\begin{definisjon}
+La $C/K$ være en kurve. 
+Vi sier at $C/K$ er \textbf{singuær} i et punkt $P \in C(K)$ dersom $ \frac{\delta f}{\delta x} = \frac{\delta f}{\delta y} = \frac{\delta f}{\delta z} = 0$ når de evalueres i punktet $P$
+
+Hvis kurven $C/K$ ikke har noen singulære punkter sier vi at den er \textbf{glatt} (eller ikke-singulær).
+\end{definisjon}
+
+\begin{eksempel}
+\label{diskriminanteksempel}
+La $f(x,y,z)$ være kurven definert i \ref{Elliptisk kurve equation} med karakteristikk $p > 3$. La oss prøve å finne de singulære punktene. De partiellderiverte til polynomet er henholdsvis $3X^2 - aZ^2$, $2YZ$ og $Y^2 - 2aX - 3bZ^2$. De singulære punktene er når disse tre evalueres til null. Da må $Y = 0$ eller $Z = 0$. Dersom $Z = 0$ får vi $3X^2 = 0$ som gir $X=0$ som igjen gir $Y^2 = 0$, altså er punktet $[0,0,0]$, men den er ikke i det projektive rommet så $Z=0$ gir ingen singulære punkter.
+
+Dersom vi ser på $Y = 0$, og bruker at punktene også må ligge på kurven, altså $Y^2Z - aX^3 - aXZ^2 - bZ^3 = 0$ (med $Y=0$) får vi (etter en del regning) at $4a^3 - 27b^2 = 0$. Med andre ord, dersom idealet til kurven er generert av polynomer der $4a^3 - 27b^2 \neq 0$, så vil kurven være glatt.
+\end{eksempel}
+
+\begin{definisjon}
+La $C/K$ være en kurve i det projektive planen. Vi sier at $C/K$ er en \textbf{Elliptisk kurve} dersom den er glatt. Vi kommer til å bruke notasjonen $E/K$ for å vise til en slik kurve.
+\end{definisjon}
+
+\begin{eksempel}
+Kurven fra eksempel \ref{Elliptisk projektiv kurve} er en elliptisk kurve dersom ligningen $4a^3 - 27b^2 \neq 0$ (se eksempel \ref{diskriminanteksempel}. Legg merke til hvordan denne minner mye om diskriminanten, $\Delta = 16(4a^3 - 27b^2)$.
+\end{eksempel}
+
+Siden vi nå vet at en projektiv varietet samsvarer med en affin varietet kommer vi til å bruke den lettere notasjonen, og de forenklede eksemplene ved affine varieteter framover. Så når vi snakker om kurven $f(x,y) = y^2 - x^3 - ax - b$ så mener vi egentlig den homogeniserte $f(X,Y,Z) = Y^2Z - X^3 - aXZ^2 - bZ^3$.
+
+%Vi ønsker polynomer av samme grad siden punktene i det projektive planet er ekvivalensklasser. Så når vi evaluerer et punkt ved å ta en representant, for eksempel $(\lambda x, \lambda y, \lambda z )$ vil vi at det skal være velldefinert, altså ha samme verdi som $(x,y,z)$. Dette ordner seg greit siden $\frac{f(\lambda x, \lambda y, \lambda z)}{ g(\lambda x, \lambda y, \lambda z)} = \frac{\lambda^d f(x, y, z)}{\lambda^d g(f,y,z)} = \frac{f(x,y,z)}{g(x,y,z)}$
+
+\textbf{TODO: Sannsynligvis kan vi fjerne de to definisjonene nedenfor}
+\begin{definisjon}
+La $V$ være en affin varietet. \textbf{Dimensjonen}, $dim(V)$, er graden til den største transcendentale kroppsutvidelsen som har $K(V)$ som sin algebraiske kroppsutvidelse.
+\end{definisjon}
+
+%Dimensjon er et viktig begrept når vi skal definere en elliptisk kurve, da ønsker vi varieteter av dimensjon 1, altså skal den transcendentale kroppsutvidelsen kun konstrueres av ett transcendentalt element.
+
+\begin{definisjon}
+Dimensjonen til en projektiv varietet er dimensjonen til den tilsvarende affine varieteten, nemlig $V \cap \Affine ^n$.
+\end{definisjon}

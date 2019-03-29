@@ -1,0 +1,27 @@
+
+\begin{teorem}
+La $q = p^2$, der $p$ er et primtall, og $\FF_q$ være en endelig kropp, og $E/\FF_q$ en supersingulær elliptisk kurve. Da har vi $\#E(\FF_q) = (p \mp 1)^2$
+
+\begin{proof}
+Fra \cite{elements_elliptic_curve} har vi at $\#E(\FF_q) = 1 + q - \beta$ der $\beta = \pm 2 \sqrt{q}$, altså er $\beta = \pm p$. Da har vi $E(\FF_q) = 1 + p^2 \mp p = (p-1)^2$
+\end{proof} 
+\textbf{TODO: Bedre bevis for dette, hvorfor må $E$ være supersingulær?}
+\end{teorem}
+
+Nå vet vi at $E(\FF_q)$ er en abelsk gruppe med $(p \mp 1)^2$ punkter. Altså kan vi si noe om strukturen.
+
+\begin{eksempel}
+La $l_A$ og $l_B$ være to (små) primtall, $e_A, e_B$ og $f \in \ZZ^+$ være positive heltall slik at $p = l_A^{e_A}l_B^{e_B}f \pm 1$ er et primtall. Da er $\FF_q = \FF_{p^2}$ en endelig kropp. La så $\#E(\FF_q) = (p \mp 1)^2 = (l_A^{e_A}l_B^{e_B}f)^2$. Da har vi fra Teorem \ref{finite abelian group} at $E(\FF_q) \cong \ZZ/(l_A^{e_A}l_B^{e_B}f)\ZZ \times \ZZ/(l_A^{e_A}l_B^{e_B}f)\ZZ$
+\end{eksempel}
+
+Siden vi vet at $E/\FF_p$ danner en endeliggenerert abelsk gruppe har vi fra teorem \ref{fundamentalteoremet} at denne kan dekomponeres til et direktesum av sykliske undergrupper. Altså finnes det undergrupper til den elliptiske kurven. 
+
+En interessant problemstilling er hvorvidt en restklasse til en elliptisk kurve også danner en elliptisk kurve.
+
+
+Skal vise:
+$E/\Phi$ er også en elliptisk kurve
+
+Oppgave 3.13
+
+Undegrupper

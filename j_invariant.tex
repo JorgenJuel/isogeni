@@ -1,0 +1,41 @@
+
+I protokollen vi skal undersøke senere er vi interessert i å komme fram til samme verdi når vi har to potensielt ulike isomorfe elliptiske kurver. Derfor er det nyttig å finne en invariant over isomorfiavbildinger. 
+
+\begin{definisjon}
+La $E/K$ være en elliptisk kurve på formen $y^2 = x^3 + Ax + B$. Vi sier at \textbf{diskriminanten}, $\Delta$, er definert som $$ \Delta = -16(4A^3 + 27B^2) $$
+\end{definisjon}
+Merk, diskriminanten sier noe om hvorvidt en kurve er singulær eller ikke. Når $\Delta \neq 0$ har vi at kurven er ikkesingulær, og altså en elliptisk kurve.
+
+\begin{definisjon}
+La $E/K$ være en elliptisk kurve på formen $y^2 = x^3 + Ax + B$. Vi sier at \textbf{j-invarianten}, j, er definert som $$ j = -12^3 \frac{(4A)^3}{\Delta} $$
+\end{definisjon}
+
+\begin{proposisjon}
+To elliptiske kurver er isomorfe hvis og bare hvis avbildingen er på formen $[u^2x, u^3y]$ der $u \in \overline{K}$. (gjelder kun med karakteristikk $\notin \{2,3 \}$) \textbf{TODO: Bevis dette}
+\end{proposisjon}
+
+\begin{proposisjon}
+To elliptiske kurver er isomorfe over $\overline{K}$ hvis og bare hvis de har samme j-invariant.
+
+\begin{proof}
+La $E_1/K$ og $E_2/K$ være elliptiske kurver på formen $y^2 = x^3 + ax + b$ og $y^2 = x^3 + \alpha x + \beta$ slik at $\phi: E_1 \rightarrow E_2$ er en isomorfi. Da har vi  at $\phi(x) = u^2x$ og $\phi(y) = u^3y$, eller med enkel substitusjon: 
+\begin{equation*}
+    a = u^4 \alpha \text{ og } b = u^6 \beta 
+\end{equation*}
+"$\Leftarrow$": La begge kurvene $E_1$ og $E_2$ ha samme j-invariant, $j$. Da har vi tre tilfeller vi må ta hensyn til:
+\begin{description}
+\item[j = 0]: Da har vi fra definisjonen av $j$-invariant at $a = \alpha = 0$. Da blir også $b \neq 0$ og $\beta \neq 0$ siden $\Delta \neq 0$ for elliiptiske kurver. Må vise at $b = u^6 \beta$, altså at $\frac{b}{\beta}$ har en sjetterot i $\overline{K}$ \textbf{Hvordan vet vi dette?}
+
+\item [j = 12$^3$]: Fra definisjonen av $j$, må 
+\begin{equation*}
+    \frac{(4a)^3}{-16(4a^3+27b^2)} = -1
+\end{equation*}
+så $a \neq 0$, noe som medfører at $b = 0$. (Tilsvarende for $\alpha$ og $\beta$. Da har vi at $a = u^4\alpha$, eller $u = \sqrt[4]{\frac{a}{\alpha}}$
+
+\item[Resten] Siden hverken $a, b, \alpha$, eller $\beta = 0$ (dersom en av de var det ville j-invarianten vært $0$ eller $12^3$, dersom begge var det blir $\Delta = 0$) har vi at $u = \sqrt[4]{\frac{a}{\alpha}} = \sqrt[6]{\frac{b}{\beta}}$
+\end{description}
+"$\Rightarrow$" \textbf{Må bevise dette}
+\end{proof}
+\end{proposisjon}
+
+Konsekvensen av denne "hvis og bare hvis" proposisjonen er at vi har en invariant over isomorfe elliptiske kurver, og denne er unik.

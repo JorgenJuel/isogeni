@@ -1,0 +1,19 @@
+\subsection{Noen problemer}
+For alle problemene, annta $p = l_A^{e_A} l_B^{e_B}f \pm 1$ er et primtall, $\{P_A, Q_A\}$ og $\{P_B, Q_B\}$ basiser for $E[l_A^{e_A}]$ og $E[l_B^{e_B}]$.
+Alt er hentet fra \cite{sidh}
+
+\subsubsection{DSI}
+(Såkalt Decisional supersingular isogeny problem). La $E$ og $E_A$ være to kurver som er definert over $\FF_{p^2}$. Er det mulig å sjekke om $E$ og $E_A$ har en isogeni av grad $l_A^{e_A}$ mellom seg (at de er $l_A^{e_A}$-isogene)?
+
+\subsubsection{CSSI}
+(Såkalt computational supersingular isogeny problem). La $\phi: E \rightarrow E_A$ være som i protokollen, altså med kjerne $\langle [m_A]P_A + [n_A]Q_A \rangle$ der $m_A$ og $n_A$ er tilfeldige. 
+
+Gitt $E_A$, $\phi(P_B)$ og $\phi(Q_B)$ - finn en generator $R_A$ for kjernen. 
+
+Angivelig enkelt å finne $m_A$ og $n_A$ ut i fra det?
+
+Kan reduseres til å finne "utvidet" diskret logaritme via $R = [m]P + [n]Q$?
+\subsubsection{SSCDH}
+(Såkalt supersingular computational diffie hellman). La $\phi_A: E \rightarrow E_A$ være som over, og $\phi_B: E \rightarrow E_B$ der kjernen er $\langle [m_B] P_B + [n_B] Q_B \rangle$. 
+
+Gitt $E_A$, $E_B$, $\phi_A(P_B)$, $\phi_A(Q_B)$, $\phi_B(P_A)$, $\phi_B(Q_A)$, finn j-invarianten til kurven $E/\langle [m_A]P_A + [n_A] Q_A, [m_B]P_B + [n_B] Q_B \rangle$

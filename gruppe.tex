@@ -1,0 +1,42 @@
+I denne seksjonen skal vi se nærmere på gruppeegenskapene til en elliptisk kurve. Vi skal vise at den danner en abelsk gruppe og si litt om hvilken struktur den har. Denne seksjonen er i praksis ikke nødvendig for å forstå resten av teksten, men vi kommer til å bruke resultatene senere.
+
+\subsection{Generelt}
+\begin{definisjon}
+La $P$ være et punkt i en elliptisk kurve $E$. Da definerer vi idealet $$M_P = \{f \in \overline{K}(E) \mid f(P) = 0 \}$$
+\end{definisjon}
+
+\begin{definisjon}
+La $f$ være en funksjon i funksjonskroppen $\overline{K}(E)$ til en elliptisk kurve $E$. Da er \textbf{ordenen}, $ord_P(f)$, ordenen til funksjonen $f$ i punktet $P$ definert som $$ord_P(f) = sup\{d \in \ZZ \mid f \in M_p^d\}$$
+\end{definisjon}
+
+\begin{proposisjon}
+La ordenen være definert som over, da gjelder følgende:
+\begin{enumerate}
+\item $ord_P(fg) = ord_P(f) + ord_P(g)$
+\item $ord_P(f/g) = ord_P(f) - ord_P(g)$.
+\end{enumerate}
+
+\begin{proof}
+La $ord_P(f) = n$ og $ord_P(g) = m$. Da vet vi at $f \in M_P^n$ og $g \in M_P^m$,
+\begin{enumerate}
+\item  Av definisjonen av idealmultiplikasjon vet vi at $f \circ g \in M_P^{m+n}$, altså har vi $ord_P(fg) = m + n = ord_P(f) + ord_P(g)$
+\item Siden $f/g = fg^{-1}$, der $g^{-1}g = e$ har vi $ord_P(g^{-1}) = -m$ siden $ord_P(e) = 0$ (fra definisjonen), altså har vi $ord_P(f/g) = ord_P(fg^{-1}) = ord_P(f) + ord_P(g^{-1}) = n - m = ord_P(f) - ord_P(g)$
+\end{enumerate}
+\end{proof}
+\end{proposisjon}
+
+\begin{definisjon}
+La $E$ være en elliptisk kurve, vi sier at \textbf{divisorgruppen}, $Div(E)$, er den frie abelske gruppen generert av punkter på $E$. 
+\end{definisjon}
+
+\begin{definisjon}
+La $Div(E)$ være en divisorgruppe til $E$. Vi kaller elementene i denne gruppen for \textbf{divisorer}, der hver divisor $D \in Div(E)$ er en formell sum $$D = \sum_{P\in E}n_P(P) $$
+Der $n_P \in \ZZ$ og kun endelig mange $n_P \neq 0$.
+
+Graden til et slikt element er definert som $$deg(D) = \sum_{P \in E} n_P$$
+\end{definisjon}
+
+\begin{definisjon}
+La $f$ være en funksjon i funksjonskroppen $\overline{K}(E)$ til en elliptisk kurve $E$. Da er divisoren, $div(f)$ definert på følgende måte: $$div(f) = \sum_{P \in E} ord_P(f)(P)$$ 
+\end{definisjon}
+

@@ -1,0 +1,70 @@
+%\begin{definisjon}
+%Vi sier at et polynom $f(x) \in R[X]$ er primitivt, dersom største felles divisor til koefissientene er en enhet i $R$.
+%\end{definisjon}
+
+\begin{teorem}
+Sylow:
+La $G$ være en endelig gruppe og $p$ være et primtall. Dersom $p^m$ deler $|G|$ har $G$ en undergruppe av orden $p^m$. \cite{algebra}
+\end{teorem}
+
+\begin{teorem}
+\label{fundamentalteoremet}
+Fundamentalteoremet av endeliggenererte abelske grupper:
+La $A$ være en endelig-generert abelsk gruppe. Da kan $A$ dekomponeres som en direktesum av et endelig anatall sykliske grupper $C_i$. 
+$$A = C_1 \oplus \ldots C_k $$ 
+For bevis, se \cite{algebra}
+\end{teorem}
+
+\begin{teorem}
+\label{finite abelian group}
+La $A$ være en endelig abelsk gruppe. Da finnes det en unik liste heltall $m_1, \ldots m_k$ (alle større enn 1), slik at $|A| = m_1 \ldots m_2$, og $A \cong \ZZ_{m_1} \oplus \ldots \oplus \ZZ_{m_k}$
+
+For bevis, se  \cite{algebra}(3.1)
+\end{teorem}
+
+
+\begin{definisjon}
+La $K[X]$ være et integritetsområde over potensielt flere variable. Da er kvotientkroppen en utvidelse av $K[X]$ som danner en kropp med elementene $$ \{(f,g) \mid f,g \in K[X], g \neq 0 \}$$
+Med følgende ekvivalensrelasjon
+$(f,g) \sim (f',g') \Leftrightarrow fg' = sf'g $ for en $s \in K[X]$
+
+Vi skriver ofte elementene $(f,g)$ som $\frac{f}{g}$
+\end{definisjon}
+
+\begin{definisjon}
+La $G$ være en gruppe, og $a,b \in G$ være to elementer i gruppa. Vi sier at $a$ og $b$ er lineart uavhengige dersom $[n]a + [m]b = e \Rightarrow n = m = 0$ for $n, m \in \ZZ$. 
+
+Der $[n]a$ = $\underbrace{a * \ldots * a}_\text{ $n$ ganger}$, og $[0]a = e$
+\end{definisjon}
+
+\begin{definisjon}
+La $E$ være en kroppsutvidelse av $F$. Et element $\alpha \in E$ er \textbf{algebraisk} over $F$ dersom det finnes elementer $a_0, \ldots a_n$ i $F$ (ikke alle lik 0), slik at $$a_0 + a_1\alpha + \ldots a_n \alpha^n = 0$$
+\end{definisjon}
+
+\begin{definisjon}
+La $E$ være en kroppsutvidelse av $F$. Vi sier at $E$ er en \textbf{transcendental utvidelse} dersom det finnes et element $x \in E$ som ikke er algebraisk i $F$.
+\end{definisjon}
+
+\begin{definisjon}
+La $E$ være en kroppsutvidelse av $F$ som konstrueres av elementene $x_1, \ldots, x_n$. Altså er $E = F(x_1, \ldots, x_n)$. Da er \textbf{graden} til $E$ lik antall elementer, $grad(E) = n$.
+\end{definisjon}
+
+Litt mer galoaisteori, så kan grafen under forklares 
+
+\begin{tikzcd}
+K(V) &  \\
+ & {K(\lambda_1, \ldots \lambda_n)} \arrow[lu, no head] \\
+K \arrow[ru, no head] \arrow[uu, no head] & 
+\end{tikzcd}
+
+
+
+\begin{eksempel}
+Polynomet $f(x,y) = y^2 - x^3 - Ax - B$ er irredusibelt over $\overline{\FF}_p$. 
+\label{Elliptisk Kurve polynom}
+\begin{proof}
+Annta ad absurdum at $f(x,y)$ kan faktoriseres. Da må begge faktoriseringen være på formen $(y + f(x))(y + g(x))$ for polynomer $f,g \in \overline{\FF}_p[X]$. Da har vi altså at $y^2 + y(f(x) + g(x)) + f(x)g(x) = y^2 - x^3 - ax - b$. Det gir oss to ligninger: $f(x) + g(x) = 0$ og $f(x)g(x) = x^3 - ax - b$. Altså er $f(x) = -g(x)$. Dette gir oss $f(x)g(x) = -f(x)^2$, men $deg(f(x)^2) = 2*deg(f(x)$, altså har polynomet en partallsgrad, så vi kan aldri få et odde polynom ut. Dette er en motsigelse siden vi vil ha et polynom på formen $x^3 - ax - b$. Dermed har vi vist at $f(x,y)$ er irredusibelt.
+\end{proof}
+
+\textbf{TODO:} Noe er feil i beviset, jeg har ikke anntatt noe om kroppen, altså finnes det ingen algebraisk utvidelse?
+\end{eksempel}

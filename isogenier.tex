@@ -1,0 +1,113 @@
+\subsection{Isogenier}
+Isogenier er sentralt for protokollen vi skal studere. 
+
+Selve definisjonen av en isogeni kommer fra at vi ønsker oss en avbilding som bevarer strukturen til den elliptiske kurven som en varietet, og som en abelsk gruppe. Det finnes flere tilsvarende definisjorer, men vi kommer til å ta utgangspunkt i følgende.
+\begin{definisjon}
+La $E/K$ være en elliptisk kurve. Vi sier at en \textbf{isogeni}, $\phi$, er en morfi, $\phi: E \rightarrow E'$, som også tilfredsstiller $\phi(\OO_E) = \OO_{E'}$
+\end{definisjon}
+
+Legg merke til at $\phi: E \rightarrow \{\OO \}$ tilfredsstiller kravene til en isogeni. Dette kalles konstantavbildingen og er i praksis en ubrukelig isogeni. Derfor kommer vi framover til å anta at $\phi$ er ikke-konstant.
+
+Nå som vi vet hva en isogeni er kan vi videre forkorte (\ref{forkortet funksjon}) slik at den tar hensyn til bevaring av gruppeoperasjonene. La $\phi = (\frac{f_1(x) + f_2(x)y}{f_3(x)}, \frac{g_1(x) + g_2(x)y}{g_3(x)})$. Siden $\phi(-P) = -\phi(P)$ for $P = (a,b) \in E/k$ har vi at $\frac{f_1(a) + f_2(a)(-b)}{f_3(a)} = \frac{f_1(a) + f_2(a)b}{f_3(a)}$, altså får vi $\frac{f_1(x) + f_2(x)y}{f_3(x)} = \frac{f_1(x)}{f_2(x)}$. Tilsvarende for $b$ har vi $\frac{g_1(a) + g_2(a)(-b)}{g_3(b)} = -\frac{g_1(a) + g_2(a)b}{g_3(a)}$, altså må $\frac{g_1(a) - g_2(a)b}{g_3(a)} = \frac{g_2(a)y}{g_3(a)}$. Med andre ord kan vi alltid skrive en isogeni på formen 
+\begin{equation}
+\label{forenklet isogeni}
+\phi = (\frac{u(x)}{v(x)}, \frac{s(x)}{t(x)}y)
+\end{equation}
+
+\begin{definisjon}
+La $\phi$ være en isogeni på den forenklede formen (\ref{forenklet isogeni}). Vi sier at \textbf{graden} til isogenien, $deg(\phi)$ er den største graden blant $u$ og $v$, altså $$deg(\phi) = max \{deg(u), deg(v) \} $$
+\end{definisjon}
+
+\begin{definisjon}
+La $\phi: E_1 \rightarrow E_2$ være en isogeni, der $\OO \in E_2$  er baseelementet til $E_2$. Vi sier at \textbf{kjernen}, $ker(\phi) = \{P \in E_2 \mid \phi(P) = \OO\}$
+\end{definisjon}
+
+\begin{teorem}
+\label{unik_kjerne}
+La $E$ være en elliptisk kurve og $\Phi$ være en endelig underrguppe av $E(K)$, da er det en unik elliptisk kurve $E'$ og en separabel isogeni $\phi$ der $\phi: E \rightarrow E'$ slik at $ker(\phi) = \Phi$
+
+\cite[6.10]{sutherland-notes}
+\end{teorem}
+
+En viktig egenskap ved isogenier er at de kan dekomponeres i isogenier av lavere grad. Dette er særdeles gunstig da mengden arbeidskraft nødvendig er proposjonal med graden til isogenien.
+
+\begin{korollar}
+\label{isogeni_dekomponering}
+La $\phi: E_1 \rightarrow E_2$ være en isogeni av sammensatt orden $n$. En slik isogeni kan alltid dekomponeres til en "sekvens" av mindre isogenier av primtallsorden.
+
+\begin{proof}
+La $G = ker(\phi)$. Siden $G$ er en abelsk gruppe vet vi at den inneholder en undergruppe, $H \leq G$, av orden $p$ der $p$ er et primtall. Av teorem \ref{unik_kjerne} har vi at det finnes en isogeni $\phi_1: E_1 \rightarrow E_3$ der $ker(\phi_2) = H$. Videre vet vi at $\phi_1(G) \cong G/H$ (siden $\phi_1$ har kjerne $H$ og $\phi_1(G) \subset E_3(\overline{K})$). Med dette kan vi lage en til isogeni, $\phi_2 : E_3 \rightarrow E_4$ med kjerne $ker(\phi_2) = G/H$. Sammensetningen, $\phi_2 \circ \phi_1: E_1 \rightarrow E_4$ er nå en isogeni med $ker(\phi_2 \circ \phi_1) = G/H \times H = G = ker(\phi)$, altså er $E_4$ og $E_2$ isomorfe. Med andre ord finnes det en isogeni av grad 1, $i: E_4 \rightarrow E_2$. Altså har vi $\phi = i \circ \phi_2 \circ \phi_1$, der $\phi_1$ har grad $p$, graden til $\phi_2$ er $n/p$, og graden til $i$ er 1. Dermed kan vi fortsette med $\phi_2$ til vi kun har primtall.
+
+\begin{figure}[h!]
+    \centering
+\begin{tikzcd}
+E_1 \arrow{r}{\phi_1} \arrow[dashed, bend right]{rrr}[description]{i \circ \phi_2 \circ \phi_1} & E_3 \arrow{r}{\phi_2} & E_4 \arrow{r}{i} & E_2
+\end{tikzcd}
+\end{figure}
+\end{proof}
+\end{korollar}
+
+\begin{eksempel}
+\label{eksempel_dekomponere_isogeni}
+La $E/\FF_q$ være en elliptisk kurve, og $\langle R\rangle \leq E(\FF_q)$, der $|\langle R \rangle | = p^e$. Vi ønsker å lage en isogeni, $\phi$, fra $E$ med kjerne $\langle R \rangle$. Ved hjelp av korollar \ref{isogeni_dekomponering} har vi at $\phi = i \circ \phi_e \circ \ldots \circ \phi_1$. Der $i$ er en isomorfiavbilding. Siden vi her ikke er ute etter den spesifikke elliptiske kurven, men heller bare én vilkårlig, kan vi droppe isomorfiavbildingen.
+
+Når vi skal beregne isogeniene $\phi_i$ gjør vi dette iterativt, og starter med $\phi_1$. Denne skal ha kjerne av grad $p$, noe vi får ved å regne ut $langle p^{e-1}R \rangle$. Altså blir $\phi_1 : E \rightarrow E/\langle p^{e-1}R \rangle = E_1$. Når vi skal beregne videre vil vi ikke nødvendigvis ha punktet $R \in E_1$, derfor må vi flytte det over med $R_1 := \phi_1(R)$. Merk at dette punktet har orden $p^{e-1}$ siden $\phi_1$ er en gruppehomomorfi med kjerne $p$. Dermed kan vi lage neste isogeni, $\phi_2 : E_1 \rightarrow E_1 / \langle p^{e-2}R_1 \rangle = E_2$. Dette kan vi fortsette med helt til vi får $\phi_e : E_{e-1} \rightarrow E_{e-1} /langle R_{e-1} \langle$. 
+
+Når vi setter dette sammen igjen får vi $$\phi = \phi_e \circ \phi_{e-1} \circ \ldots \circ \phi_1 $$ Av med kjerne $ker(\phi) \cong (\ZZ_p)^e$, altså vil graden til $\phi$ være $p^e$.
+\end{eksempel}
+
+Men vi er ikke bare interessert i den abstrakte teorien, vi er også interessert i hvordan vi kan bruke dette. Derfor introduserer vi nå noen algoritmer fra for å beregne isogenier ut fra kjernen. Merk at dette ikke nødvendigvis er de raskeste formlene for å beregne isogenier, men de er relativt enkle, og gir en god nok innføring for vår del.
+
+
+Først tar vi algoritmen for å beregne isogenier av grad 2
+\begin{teorem}
+(Vélu) \cite{velu} La $E_1/K$ være en elliptisk kurve definert av $y^2 - x^3 - Ax - B$. La så $x_0$ være en rot av $x^3 + Ax + B \in \overline{K}[x]$. Sett så $t = 3x_0^2 + A$ og $w = x_0 + t$. Den rasjonale avbildingen $$\phi(x,y) = \Bigg( \frac{x^2-x_0x+t}{x-x_0}, \frac{(x- x_0)^2 - t}{(x-x_0)^2}y \Bigg)$$ er en separabel isogeni fra $E_1$  til $E_2$, der $E_2$ er den elliptiske kurven definert av $y^2 - x^3 - A'X - B$ der $A' = A - 5t$ og $B' = b - 7w$. Kjernen til $\phi$ er gruppen av orden 2 som genereres av $(x_0, 0)$. 
+\begin{proof}
+Se \cite[6.12]{sutherland-notes}
+\end{proof}
+\end{teorem}
+
+
+Så har vi isogenier av odde grad. 
+\begin{teorem}
+(Vélu) \cite{velu} La $E_1/K$ være en elliptisk kurve definert av  $y^2 - x^3 - Ax - B$. La så $G$ være en endelig undergruppe av $E(\overline{K})$ av oddetallsorden. For hver ikke-null $Q = (x_Q, y_Q) \in G$ definerer vi $t_Q = 3x_Q^2 + A$, $u_Q = 2y_Q^2$ og $w_Q = u_Q + t_Qx_Q$. Videre setter vi $t = \sum t_Q$, $w = \sum w_Q$ og $$r(x) = x + \sum (\frac{t_Q}{x - x_Q} + \frac{u_Q}{(x - x_Q)^2})$$. Da vil den rasjonale avbildingen $$ \phi(x,y) = (r(x), r'(x)y)$$ være en separabel isogeni fra $E_1$ til $E_2$ der $E_2$ er definer av $y^2 - x^3 - A'x - B' $ med $A' = A - 5t$ og $B' = B - 7w$ med kjerne $ker(\phi) = G$
+
+\begin{proof}
+Se \cite[6.14]{sutherland-notes}
+\end{proof}
+\end{teorem}
+
+Nå som vi kan beregne isogenier av grad 2 og odde grad, har vi mulitheten til å sette disse sammen til en isogeni av vilkårlig grad.
+
+
+\subsection{Endomorfier}
+
+\begin{definisjon}
+La $E/K$ være en elliptisk kurve. Vi sier at en isogeni $\phi$ er en \textbf{endormorfi }dersom den avbilder $E$ på seg selv, altså $\phi: E \rightarrow E$.
+
+Dersom den i tillegg er isomorfisk sier vi at det er en \textbf{automorfi}.
+\end{definisjon}
+
+
+
+\textbf{TODO: Eksempel delvis tatt fra Washington, se om det bør fjernes/erstattes}
+\begin{eksempel}
+\label{enkel_endormorfi}
+La $E$ være den elliptiske kurven gitt av $f(x,y) = y^2 - x^3 - B$. Da vil $\alpha(P) = [2]P$ være en endomorfi gitt av $\alpha(x,y) = (f_1(x,y), f_2(x,y))$, der 
+\begin{align*}
+f_1(x,y) &= \Big(\frac{3x^2}{2y} \Big)^2 - 2x & f_2(x,y) &= \frac{3x^2}{2y}\bigg(\Big(\frac{3x^2}{2y} \Big)^2 - 3x\bigg) - y 
+\end{align*}
+\end{eksempel}
+
+En spesielt interessant endomorfi er \textbf{Frobenius endomorfien}. La $\phi_q : \overline{\FF_q} \rightarrow \overline{\FF_q}$, slik at $x \mapsto x^q$. Da er frobenius enomorfien $\pi_q: E \rightarrow E$, med $(x,y) \mapsto (x^q, y^q)$
+
+\begin{lemma}
+La $E/\FF_q$, og $(x,y) \in E(\overline{\FF_q})$, da har vi \begin{enumerate}
+\item $\pi_q(x,y) \in E(\overline{\FF_q})$
+\item $(x,y) \in E(\FF_q)$ hvis og bare hvis $\pi(x,y) = (x,y)$
+\end{enumerate}
+
+\begin{proof}
+Se \cite[93, 4.5]{washington}
+\end{proof}
+\end{lemma}

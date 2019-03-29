@@ -1,0 +1,17 @@
+
+\begin{definisjon}
+La $E/K$ være en elliptisk kurve definert over en kropp $K$ med karakteristikk $p$. Vi sier at $E$ er \textbf{supersingulær} dersom det eneste punktet i $E[p] = \{\OO \}$
+\end{definisjon}
+
+\begin{proposisjon}
+La $E$ være en elliptisk kurve over $\FF_{p^n}$ der $p$ er et primtall og $n$ er et positivt heltall. La så $a = p^n + 1 - \# E(\FF_{p^n})$. Da er $E$ supersingulær hvis og bare hvis $a \cong 0 \mod{p}$, eller tilsvarende $\#E(\FF_{p^n}) \cong 1 \mod{p}$.
+\end{proposisjon}
+
+\begin{proposisjon}
+La $q = p^n$ for et primtall $p$ og positivt heltall $n$ og $B \in \FF_q^x$, der $q \cong 2 \mod{3}$. Da vil den ellitpsike kurven gitt av polynomet $y^2 - x^3 - B$ være supersingulær.
+
+\begin{proof}
+La $\psi:  \FF_q^x \rightarrow  \FF_q^x$ være homomorfien definert av $\psi(x) = x^3$. Siden $q-1$ ikke er en multippel av $3$ er det ingen elementer av orden $3$ i $ \FF_q^x$, altså er $ker(\psi) = \{0\}$. Med andre ord, $\psi$ er injektiv. Siden det er en avbilding fra en endelig gruppe til seg selv er den altså også surjektiv. Noe som betyr at alle elementer i $\FF_q$ har en unik tredjerot i $\FF_q$ (Merk at $\FF_q^x = \FF_q \setminus \{0\}$, og $0 = 0^3$. Spessielt har alle punkter, $y^2 - B$, en tredjerot, $x$ som gir oss $y^2 - x^3 - B = 0$ - altså har vi $q$ punkter. Dersom vi legger til punktet i uendeligheten, $\OO$ har vi $q+1$ punkter, og $E$ er supersingulær.\textbf{TODO: sjekk dette,Korollar 3:30 sier at dette gjelder dersom $q$ er primtall, ikke ellers.}
+\cite[4.3.1]{washington}
+\end{proof}
+\end{proposisjon}

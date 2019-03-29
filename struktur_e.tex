@@ -1,0 +1,27 @@
+
+\begin{teorem}
+\textbf{Mordell–Weil} La $K$ være en endelig kropp. Da vil de $K$-rasjonale punktene til en elliptisk kurve danne en endeliggenerert abelsk gruppe.
+\begin{proof}
+For bevis, se \cite[207, VIII]{silverman}
+\end{proof}
+\end{teorem}
+
+Vi vet nå at $E/K$ danner en endeliggenerert abelsk gruppe dersom $K$ er endelig.
+Vi er ofte interessert i kardinaliteten, antall elementer, til en elliptisk kurve - vi bruker den 
+korte notasjonen $\#E(K)$ for å indikere antall $K$-rasjonale punkter i $E$.
+
+\begin{teorem}
+La $E/\FF_q$ være en ellliptisk kurve. Da vil enten 
+\begin{align*}
+E(\FF_q) \cong \ZZ/n\ZZ & \text{ eller } & E(\FF_q) \cong \ZZ/n\ZZ \oplus \ZZ/n\ZZ & 
+\end{align*}
+\begin{proof}
+fra teorem \ref{finite abelian group} har vi at $E(\FF_q)$ er isomorf til en direktesum av sykliske grupper, $\ZZ/n_1\ZZ \oplus \ldots \oplus \ZZ/n_r\ZZ$. Med $n_i \mid n_{i+1}$. For hver $i$ vil gruppen $\ZZ/n_i\ZZ$ ha $n_i$ elementer av orden som deler $n_i$. Dette medfører at $E(\FF_q)$ har $n_1^r$ elementer av orden $n_1$. Men fra teorem \ref{torsonstruktur} har vi at det maksimalt er $n_1^2$ slike. Altså må $r \leq 2$. \cite[91, Teorem 4.1]{washington}
+\end{proof}
+\end{teorem}
+
+\begin{teorem}
+(Hasse) \textbf{TODO: Finn riktig referanse til Hasses opprinnelige teorem}. La $E/\FF_q$. Da vil ordenen til $F_1$ tilfredsstille $$| q + 1 - \#E(\FF_q) | \leq 2 \sqrt{q}$$
+\end{teorem}
+
+\textbf{TODO: Bruk hasses teorem til å sette begrensingen, vis så for elliptiske kurver at det finnes en kurve som er definert som den under.}
