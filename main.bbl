@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.8 $
+% $ biblatex bbl format version 2.9 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \sortlist[entry]{nty/global/}
+  \datalist[entry]{nty/global//global/global}
     \entry{algebra}{book}{}
       \name{author}{3}{}{%
         {{hash=8bb5a72e2178988bd5f3dbf48ee765a5}{%
@@ -42,10 +42,12 @@
       }
       \strng{namehash}{237cf70cb76988e24c3354d043314622}
       \strng{fullhash}{237cf70cb76988e24c3354d043314622}
+      \strng{bibnamehash}{237cf70cb76988e24c3354d043314622}
+      \strng{authorbibnamehash}{237cf70cb76988e24c3354d043314622}
       \strng{authornamehash}{237cf70cb76988e24c3354d043314622}
       \strng{authorfullhash}{237cf70cb76988e24c3354d043314622}
       \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second}
@@ -57,14 +59,17 @@
       \verb{doi}
       \verb 10.1017/CBO9781139174237
       \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1017/CBO9781139174237
+      \endverb
       \verb{url}
       \verb https://doi.org/10.1017/CBO9781139174237
       \endverb
     \endentry
     \entry{cunstructing_supersingular_elliptic_curves}{article}{}
       \name{author}{1}{}{%
-        {{hash=4ea754f4de3d0dd87539e564ab0364cc}{%
-           family={Bröker},
+        {{hash=8170088c42e12d538106306fed2e60e3}{%
+           family={Br{ö}ker},
            familyi={B\bibinitperiod},
            given={Reinier},
            giveni={R\bibinitperiod}}}%
@@ -72,12 +77,14 @@
       \list{publisher}{1}{%
         {Citeseer}%
       }
-      \strng{namehash}{4ea754f4de3d0dd87539e564ab0364cc}
-      \strng{fullhash}{4ea754f4de3d0dd87539e564ab0364cc}
-      \strng{authornamehash}{4ea754f4de3d0dd87539e564ab0364cc}
-      \strng{authorfullhash}{4ea754f4de3d0dd87539e564ab0364cc}
+      \strng{namehash}{8170088c42e12d538106306fed2e60e3}
+      \strng{fullhash}{8170088c42e12d538106306fed2e60e3}
+      \strng{bibnamehash}{8170088c42e12d538106306fed2e60e3}
+      \strng{authorbibnamehash}{8170088c42e12d538106306fed2e60e3}
+      \strng{authornamehash}{8170088c42e12d538106306fed2e60e3}
+      \strng{authorfullhash}{8170088c42e12d538106306fed2e60e3}
       \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Comb. Number Theory}
@@ -101,16 +108,21 @@
       }
       \strng{namehash}{767aa5987bc9ca34674f72789ffddce3}
       \strng{fullhash}{767aa5987bc9ca34674f72789ffddce3}
+      \strng{bibnamehash}{767aa5987bc9ca34674f72789ffddce3}
+      \strng{authorbibnamehash}{767aa5987bc9ca34674f72789ffddce3}
       \strng{authornamehash}{767aa5987bc9ca34674f72789ffddce3}
       \strng{authorfullhash}{767aa5987bc9ca34674f72789ffddce3}
       \field{sortinit}{F}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780201510102}
       \field{series}{Advanced book classics}
       \field{title}{Algebraic curves: an introduction to algebraic geometry}
       \field{year}{1989}
+      \verb{urlraw}
+      \verb https://books.google.no/books?id=SEbvAAAAMAAJ
+      \endverb
       \verb{url}
       \verb https://books.google.no/books?id=SEbvAAAAMAAJ
       \endverb
@@ -143,12 +155,15 @@
       }
       \strng{namehash}{4a3e5784c038a141b5f10c51ff8436de}
       \strng{fullhash}{4a3e5784c038a141b5f10c51ff8436de}
+      \strng{bibnamehash}{4a3e5784c038a141b5f10c51ff8436de}
+      \strng{authorbibnamehash}{4a3e5784c038a141b5f10c51ff8436de}
       \strng{authornamehash}{4a3e5784c038a141b5f10c51ff8436de}
       \strng{authorfullhash}{4a3e5784c038a141b5f10c51ff8436de}
+      \strng{editorbibnamehash}{933b52106a6745075f2fd273d943c021}
       \strng{editornamehash}{933b52106a6745075f2fd273d943c021}
       \strng{editorfullhash}{933b52106a6745075f2fd273d943c021}
       \field{sortinit}{J}
-      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We present new candidates for quantum-resistant public-key cryptosystems based on the conjectured difficulty of finding isogenies between supersingular elliptic curves. The main technical idea in our scheme is that we transmit the images of torsion bases under the isogeny in order to allow the two parties to arrive at a common shared key despite the noncommutativity of the endomorphism ring. Our work is motivated by the recent development of a subexponential-time quantum algorithm for constructing isogenies between ordinary elliptic curves. In the supersingular case, by contrast, the fastest known quantum attack remains exponential, since the noncommutativity of the endomorphism ring means that the approach used in the ordinary case does not apply. We give a precise formulation of the necessary computational assumption along with a discussion of its validity. In addition, we present implementation results showing that our protocols are multiple orders of magnitude faster than previous isogeny-based cryptosystems over ordinary curves.}
@@ -161,8 +176,8 @@
     \endentry
     \entry{elements_elliptic_curve}{article}{}
       \name{author}{1}{}{%
-        {{hash=5cd8e00710f43c41d8f7d6667efbc39f}{%
-           family={Rück},
+        {{hash=c331890f1c89abaa126072cd042c63d6}{%
+           family={R{ü}ck},
            familyi={R\bibinitperiod},
            given={Hans-Georg},
            giveni={H\bibinithyphendelim G\bibinitperiod}}}%
@@ -170,12 +185,14 @@
       \list{publisher}{1}{%
         {American Mathematical Society}%
       }
-      \strng{namehash}{5cd8e00710f43c41d8f7d6667efbc39f}
-      \strng{fullhash}{5cd8e00710f43c41d8f7d6667efbc39f}
-      \strng{authornamehash}{5cd8e00710f43c41d8f7d6667efbc39f}
-      \strng{authorfullhash}{5cd8e00710f43c41d8f7d6667efbc39f}
+      \strng{namehash}{c331890f1c89abaa126072cd042c63d6}
+      \strng{fullhash}{c331890f1c89abaa126072cd042c63d6}
+      \strng{bibnamehash}{c331890f1c89abaa126072cd042c63d6}
+      \strng{authorbibnamehash}{c331890f1c89abaa126072cd042c63d6}
+      \strng{authornamehash}{c331890f1c89abaa126072cd042c63d6}
+      \strng{authorfullhash}{c331890f1c89abaa126072cd042c63d6}
       \field{sortinit}{R}
-      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Math. Comp.}
@@ -199,10 +216,12 @@
       }
       \strng{namehash}{3664152377f03b41cc73f9421d227145}
       \strng{fullhash}{3664152377f03b41cc73f9421d227145}
+      \strng{bibnamehash}{3664152377f03b41cc73f9421d227145}
+      \strng{authorbibnamehash}{3664152377f03b41cc73f9421d227145}
       \strng{authornamehash}{3664152377f03b41cc73f9421d227145}
       \strng{authorfullhash}{3664152377f03b41cc73f9421d227145}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second}
@@ -215,6 +234,9 @@
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1007/978-0-387-09494-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-0-387-09494-6
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/978-0-387-09494-6
@@ -230,10 +252,12 @@
       }
       \strng{namehash}{39b64057826c6e70abf28e03e9b1fa8f}
       \strng{fullhash}{39b64057826c6e70abf28e03e9b1fa8f}
+      \strng{bibnamehash}{39b64057826c6e70abf28e03e9b1fa8f}
+      \strng{authorbibnamehash}{39b64057826c6e70abf28e03e9b1fa8f}
       \strng{authornamehash}{39b64057826c6e70abf28e03e9b1fa8f}
       \strng{authorfullhash}{39b64057826c6e70abf28e03e9b1fa8f}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{URL: \url{https://ocw.mit.edu/courses/mathematics/18-783-elliptic-curves-spring-2017/lecture-notes/}. Last visited on 2019/03/25}
@@ -248,14 +272,14 @@
            given={J.},
            giveni={J\bibinitperiod}}}%
       }
-      \list{publisher}{0}{%
-      }
       \strng{namehash}{1625798a10b29235bda6498de6309f09}
       \strng{fullhash}{1625798a10b29235bda6498de6309f09}
+      \strng{bibnamehash}{1625798a10b29235bda6498de6309f09}
+      \strng{authorbibnamehash}{1625798a10b29235bda6498de6309f09}
       \strng{authornamehash}{1625798a10b29235bda6498de6309f09}
       \strng{authorfullhash}{1625798a10b29235bda6498de6309f09}
       \field{sortinit}{V}
-      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{C. R. Acad. Sci. Paris, Series A}
@@ -264,6 +288,9 @@
       \field{year}{1971}
       \field{pages}{305\bibrangedash 347}
       \range{pages}{43}
+      \verb{urlraw}
+      \verb https://ci.nii.ac.jp/naid/10029941471/en/
+      \endverb
       \verb{url}
       \verb https://ci.nii.ac.jp/naid/10029941471/en/
       \endverb
@@ -287,10 +314,12 @@
       }
       \strng{namehash}{acb74b5bc509c76e008926f87042328e}
       \strng{fullhash}{acb74b5bc509c76e008926f87042328e}
+      \strng{bibnamehash}{acb74b5bc509c76e008926f87042328e}
+      \strng{authorbibnamehash}{acb74b5bc509c76e008926f87042328e}
       \strng{authornamehash}{acb74b5bc509c76e008926f87042328e}
       \strng{authorfullhash}{acb74b5bc509c76e008926f87042328e}
       \field{sortinit}{W}
-      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{1584883650}
@@ -299,7 +328,7 @@
       \field{year}{2003}
       \keyw{Koding; Kryptografi; Tallteori; Elliptiske kurver; Elliptiske kurver; Tallteori; Kryptografi -- Matematikk; tallteori; kryptografi; koding}
     \endentry
-  \endsortlist
+  \enddatalist
 \endrefsection
 \endinput
 

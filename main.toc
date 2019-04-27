@@ -1,6 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\select@language {norsk}
+\babel@toc {norsk}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Algebra}{2}
 \defcounter {refsection}{0}\relax 
@@ -18,7 +17,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Isogenier}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Endomorfier}{14}
+\contentsline {subsection}{\numberline {3.3}Endomorfier}{15}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Struktur}{15}
 \defcounter {refsection}{0}\relax 
@@ -26,31 +25,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Torsiongrupper}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Strukturen til $E$}{18}
+\contentsline {subsection}{\numberline {4.3}Strukturen til $E$}{19}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.4}Supersingul\IeC {\ae }re kurver}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}SIDH/CSIDH}{19}
+\contentsline {section}{\numberline {5}Protokoller}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}N\IeC {\o }kkelutveksling}{19}
+\contentsline {subsection}{\numberline {5.1}SIDH}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Komponenter}{20}
+\contentsline {subsubsection}{\numberline {5.1.1}N\IeC {\o }kkelutveksling}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1}Finne primtallet P}{20}
+\contentsline {subsubsection}{\numberline {5.1.2}Komponenter}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2}Finne den elliptiske kurven}{20}
+\contentsline {section}{\numberline {6}Sikkerhet}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.3}Finne basiser for torsongruppene}{20}
+\contentsline {subsection}{\numberline {6.1}Noen problemer}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.4}Beregne isogenien og kjernen}{21}
+\contentsline {subsubsection}{\numberline {6.1.1}DSI}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Sikkerhet}{21}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Noen problemer}{21}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.1}DSI}{21}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.2}CSSI}{21}
+\contentsline {subsubsection}{\numberline {6.1.2}CSSI}{22}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.1.3}SSCDH}{22}
 \defcounter {refsection}{0}\relax 

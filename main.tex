@@ -1,19 +1,19 @@
 \documentclass[norsk]{article}
+\usepackage{babel}[norsk]
 \usepackage[utf8]{inputenc}
 
-\usepackage{babel}[norsk]
 
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{enumitem}
-\usepackage{tikz}
+\usepackage{tikz,pgflibraryarrows,pgflibraryplotmarks,pgflibrarysnakes,pgflibraryshapes}
+\usepackage{tikzsymbols}
 \usepackage{tikz-cd}
 \usepackage{biblatex}[backend=biber]
 \usepackage{graphicx}
 \usepackage[keys, sets, operators, primitives]{cryptocode}
 
-\usepackage{glossaries}
 
 \usepackage{pgfplots}
 
@@ -36,8 +36,6 @@
 \newcommand{\Projective}{\mathbb{P}}
 \newcommand{\OO}{\mathcal{O}}
 
-\makeglossaries
-\input{glossaries.tex}
 
 \bibliography{references}
 
@@ -68,7 +66,7 @@
 \section{Struktur}
 \input{struktur.tex}
 
-\section{SIDH/CSIDH}
+\section{Protokoller}
 \input{sidh.tex}
 
 \section{Sikkerhet}
@@ -82,7 +80,6 @@ Hvorfor er dette sikkert/vanskelig å knekke.
 
 \clearpage
  
-\printglossary
 
 \printbibliography
 

@@ -67,7 +67,6 @@ Se \cite[6.12]{sutherland-notes}
 \end{proof}
 \end{teorem}
 
-
 Så har vi isogenier av odde grad. 
 \begin{teorem}
 (Vélu) \cite{velu} La $E_1/K$ være en elliptisk kurve definert av  $y^2 - x^3 - Ax - B$. La så $G$ være en endelig undergruppe av $E(\overline{K})$ av oddetallsorden. For hver ikke-null $Q = (x_Q, y_Q) \in G$ definerer vi $t_Q = 3x_Q^2 + A$, $u_Q = 2y_Q^2$ og $w_Q = u_Q + t_Qx_Q$. Videre setter vi $t = \sum t_Q$, $w = \sum w_Q$ og $$r(x) = x + \sum (\frac{t_Q}{x - x_Q} + \frac{u_Q}{(x - x_Q)^2})$$. Da vil den rasjonale avbildingen $$ \phi(x,y) = (r(x), r'(x)y)$$ være en separabel isogeni fra $E_1$ til $E_2$ der $E_2$ er definer av $y^2 - x^3 - A'x - B' $ med $A' = A - 5t$ og $B' = B - 7w$ med kjerne $ker(\phi) = G$
@@ -76,6 +75,33 @@ Så har vi isogenier av odde grad.
 Se \cite[6.14]{sutherland-notes}
 \end{proof}
 \end{teorem}
+
+
+
+\begin{eksempel}
+La $E/\FF_{11}$, $E: y^2 = x^3 + 5$. Her vil $E(\FF_{11})= \{\OO, (0,4),$ $(0,7), (4,5), (4,6), (5,3),$ $(5,8),$ $(6,1),$ $(6,10),$ $(8,0),$ $(10,2),$ $(10,9) \}$. Vi kan enkelt sjekke at $(0,4)$ og $(0,7)$ har orden $3$. Altså med $G = \{\OO, (0,4), (0,7)\}$ har vi en endelig undergruppe med orden $3$. La oss nå regne ut isogenien med kjerne $G$.
+
+Ikke-null $Q \in G$ er da $(0,4)$ og $(0,7)$. $A = 0, B = 5$
+
+$t_1 = 3*0^2 + 0 = 0$, $t_2 = 3*0^2 + 0$, altså blir $t = t_1 + t_2 = 0$.
+
+$u_1 = 2*4^2 = 10$, $u_2 = 2*7^2 = 10$, siden $t = 0$ blir $w_1 = u_1$ og $w_2 = u_2$. altså blir $w = 9$.
+
+$r(x) = x + \frac{10}{x^2} + \frac{10}{x^2} = \frac{x^3 + 9}{x^2}$
+
+$A' = 0, B' = 5 - 7*9 = 8$
+
+Altså blir $$\phi(x,y) = \Big(\frac{x^3 + 9}{x^2}, \frac{3x^3y + 4y}{x^3}\Big)$$ en isogeni fra $E$ til $E_2: y^2 - x^3 - 8$. 
+
+Vi kan finne ut at $E_2(\FF_{11} = \{\OO, (0,1),$ $(1,3), (1,8),$ $(2,4), (2,7),$ $(5,1), (5,10),$ $(6,2), (6,9),$ $(8,5), (8,6),$ $(9,0)\}$. 
+
+En interessant observasjon vi kan se er at alle $\FF_{11}$-rasjonale punkter i $E_2$ som også har $\FF_{11}$-rasjonalt prebilde har tre slike prebilder i $E$, for eksempel $\phi(0,4) = (0,1) = \phi(0,7) = \phi(0, 1)$, og tilsvarende $(8,6) = \phi(4,5) = \phi(5,3) = \phi(10,9)$. Men begge kurvene har like mange punkter. f.eks. er $(1,3)$ et slikt punkt som blant annet har prebildet $(x,y)$\textbf{Todo: Finn dette punktet/prebildet}
+
+
+
+\textbf{TODO: Tegn opp grafer fra $E_1$ til $E_2$, se på hvilke hvor de nye punktene kommer fra}
+
+\end{eksempel}
 
 Nå som vi kan beregne isogenier av grad 2 og odde grad, har vi mulitheten til å sette disse sammen til en isogeni av vilkårlig grad.
 
